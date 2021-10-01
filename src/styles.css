@@ -1,0 +1,8 @@
+@import-normalize;
+@import-sanitize;
+
+* {
+    box-sizing: border-box;
+    color: #333;
+}
+
