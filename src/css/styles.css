@@ -24,7 +24,7 @@ body::after{
     top:0;
     left: 0;
     --start-percent: 30%;
-    background: linear-gradient(40deg,
+    background: linear-gradient(48deg,
     rgb(241, 225, 190) 0 var(--start-percent),
     brown var(--start-percent) calc(var(--start-percent) + 80px),
     rgb(165, 101, 42) calc(var(--start-percent) + 80px) calc(var(--start-percent) + 160px),
@@ -80,6 +80,10 @@ body::after{
 
 #root > header, #root > footer, main {
     padding: 0 2.5%;
+}
+
+#root > footer{
+    color: white;
 }
 
 main {
