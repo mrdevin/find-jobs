@@ -1,0 +1,51 @@
+@import-normalize;
+@import-sanitize;
+@import 'job.css';
+@import 'search.css';
+
+* {
+    box-sizing: border-box;
+    color: #333;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+[hidden]{
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    max-height: 0px;
+    /* transition: opacity .5s linear; */
+}
+
+#root {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    font-size: 3rem;
+}
+
+header, footer {
+    background-color: blanchedalmond;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+header, footer, main {
+    padding: 0 2.5%;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+@media (min-width: 1024px) {
+    header, footer, main {
+        padding: 0 10%;
+    }
+}
+

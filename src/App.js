@@ -5,7 +5,6 @@ import Job from "./Job";
 
 const App = () => {
   const [jobsList, setJobsList] = useState([]);
-  // const [jobsList, setJobsList] = useState([]);
 
 
   useEffect(() => {
@@ -27,15 +26,16 @@ const App = () => {
 
 
   return (
-    <div>
-      <h1>Find a Job</h1>
-      <Search jobs={jobsList} setJobsList={setJobsList}></Search>
+    <>
+    <header> Find a Job </header>
+    <main>
+      <Search  jobs={jobsList} setJobsList={setJobsList}></Search>
       {jobsList.map((job)=>(
-        <Job key={job.id} job={job}></Job>
-
+        <Job hidden={job.hidden} key={job.id} job={job}></Job>
       ))}
-
-    </div>
+    </main>
+    <footer>©2021</footer>
+    </>
   );
 };
 

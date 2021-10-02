@@ -1,0 +1,73 @@
+.job {
+    background-color: beige;
+    margin-bottom: 1.38rem;
+    padding: 20px;
+    width: 100%;
+    /* max-width: 300px; */
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    max-height: 1500px;
+    opacity: 1;
+    transition: opacity .6s linear, max-height .8s linear;
+}
+.job[hidden]{
+    margin: 0;
+}
+
+.job .logo,
+.job .cover {
+    max-height: 100px;
+    max-width: 100%;
+}
+
+.job .logo{
+    max-height: 50px;
+}
+
+.job small{
+    font-size: .5em;
+}
+
+.job [state=min], .job [state=max]{
+    max-height: 10em;
+    /* height: 10em; */
+    position: relative;
+    overflow: hidden;
+    margin-bottom: .83rem;
+    /* height: 0; */
+    /* max-height: 0; */
+    transition:  max-height .6s linear;
+
+}
+
+.job [state=max]{
+    height: auto;
+    max-height: 1000px;
+}
+
+.maxDescr{
+    position: absolute;
+    bottom: -1em;
+    right: 0;
+}
+
+
+.btn, button {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-transform: none;
+    text-decoration: none;
+    background-color:cornflowerblue;
+    border-radius: 3px;
+    border: 0;
+    padding: 10px;
+    color: white;
+    font-weight: 700;
+    width: fit-content;
+    margin-right: .83rem;
+    margin-bottom: .83rem;
+}
+
