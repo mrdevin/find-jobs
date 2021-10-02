@@ -29,12 +29,17 @@
     max-height: 60px;
 }
 
-.job .cover{
+.job .cover {
     grid-column: 3/4;
     align-self: flex-start;
     margin: 0 auto auto 0;
-    filter:sepia();
+    filter: sepia(1);
     border:  4px double rgba(236, 121, 13, 0.849);
+    transition: filter .4s linear;
+}
+
+.job .cover:hover{
+    filter: sepia(0);
 }
 
 .job small{
@@ -84,7 +89,7 @@
     width: fit-content;
     cursor: pointer;
     box-shadow:   1px 1px 0 1px rgb(79, 123, 206);
-    transition: box-shadow .4s linear, transform .4s linear;
+    transition: box-shadow .25s cubic-bezier(.16,.89,1,1.18), transform .25s cubic-bezier(.16,.89,1,1.18);
 }
 
 .btn:hover, button:hover {
@@ -94,7 +99,7 @@
 
 .btn:active, button:active {
     box-shadow:   1px 1px 0 1px rgb(86, 118, 177);
-    transition: box-shadow .4s linear, transform .4s linear;
+    transition: box-shadow .1s linear, transform .1s linear;
     transform: translate(0px, 0px)
 }
 
