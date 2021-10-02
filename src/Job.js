@@ -30,7 +30,7 @@ const Job = (props) => {
           {job.function}
         </h2>
 
-        <h3>{job.experience} ::: {job['employment_type']}</h3>
+        <h3>{job.experience} </h3><h3><small>{job['employment_type']}  </small></h3>
         <small>{company.name} <time dateTime={job['from_date']}>posted on: {job['from_date']}</time></small>
         </div>
         <img className="cover" width="2286" height="821"crossOrigin="anonymous" src={company.cover} alt={`${company.name} cover`}/>

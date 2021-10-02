@@ -16,6 +16,8 @@
     max-height: 0px;
     /* transition: opacity .5s linear; */
 }
+
+
 body::after{
     content: '';
     display: block;
@@ -23,12 +25,13 @@ body::after{
     top:0;
     left: 0;
     --start-percent: 30%;
-    background: linear-gradient(45deg,
-    white 0 var(--start-percent),brown var(--start-percent) calc(var(--start-percent) + 50px),
-    orange calc(var(--start-percent) + 50px) calc(var(--start-percent) + 100px),
-    green calc(var(--start-percent) + 100px) calc(var(--start-percent) + 150px),
-    yellow calc(var(--start-percent) + 150px) calc(var(--start-percent) + 200px),
-    white calc(var(--start-percent) + 200px) 100%);
+    background: linear-gradient(40deg,
+    rgb(241, 225, 190) 0 var(--start-percent),
+    brown var(--start-percent) calc(var(--start-percent) + 80px),
+    rgb(165, 101, 42) calc(var(--start-percent) + 80px) calc(var(--start-percent) + 160px),
+    rgba(236, 121, 13, 0.849) calc(var(--start-percent) + 160px) calc(var(--start-percent) + 240px),
+    #fc3 calc(var(--start-percent) + 240px) calc(var(--start-percent) + 320px),
+    rgb(241, 225, 190) calc(var(--start-percent) + 320px) 100%);
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -50,13 +53,22 @@ body::after{
     z-index: 100;
     position: fixed;
     width: 100%;
-    background: linear-gradient(180deg, rgba(255,255,255, .8)0% 55%, rgba(255,255,255,0.0) 75% 100%);
-
+    background: linear-gradient(180deg, rgba(241, 225, 190, .99)0% 75%, rgba(255,255,255,0.0) 95% 100%);
 }
 
-#root > header h1{
+#root > header h1 {
     font-size: 3rem;
     margin:0;
+    -webkit-text-stroke: 2px #fc3;
+    color: rgb(165, 101, 42);
+
+    text-shadow:
+        3px 3px 0 rgba(236, 121, 13, 0.849),
+      -3px -3px 0 rgba(236, 121, 13, 0.849),
+       3px -3px 0 rgba(236, 121, 13, 0.849),
+       -3px 3px 0 rgba(236, 121, 13, 0.849),
+        3px 3px 0 rgba(236, 121, 13, 0.849);
+
 }
 
 #root > header, #root > footer {
@@ -77,9 +89,9 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 @media (min-width: 1024px) {
     #root > header, #root > footer, main {
         padding: 0 10%;
     }
 }
-
