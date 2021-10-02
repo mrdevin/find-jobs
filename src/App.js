@@ -27,9 +27,12 @@ const App = () => {
 
   return (
     <>
-    <header> Find a Job </header>
-    <main>
+    <header>
+      <h1>Find a Job</h1>
       <Search  jobs={jobsList} setJobsList={setJobsList}></Search>
+    </header>
+    <main>
+
       {jobsList.map((job)=>(
         <Job hidden={job.hidden} key={job.id} job={job}></Job>
       ))}

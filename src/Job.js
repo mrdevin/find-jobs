@@ -23,14 +23,18 @@ const Job = (props) => {
 
   return (
     <article hidden={props.hidden} className="job">
-      <h2>
+      <header>
         <img className="logo" crossOrigin="anonymous" src={company.logo} alt={`${company.name} logo`} />
-        {job.function} <small>{job.experience}</small></h2>
-      <h3>{job['employment_type']}</h3>
 
-      <div>{company.name} <time dateTime={job['from_date']}>posted on: {job['from_date']}</time></div>
+        <div className="title"><h2>
+          {job.function}
+        </h2>
 
-      <img className="cover" crossOrigin="anonymous" src={company.cover} alt={`${company.name} cover`}/>
+        <h3>{job.experience} ::: {job['employment_type']}</h3>
+        <small>{company.name} <time dateTime={job['from_date']}>posted on: {job['from_date']}</time></small>
+        </div>
+        <img className="cover" width="2286" height="821"crossOrigin="anonymous" src={company.cover} alt={`${company.name} cover`}/>
+      </header>
       <div state={maximize ? 'max': 'min'}>
       <h4>Job Description</h4>
       <section  dangerouslySetInnerHTML={{__html: job.descr}}></section>
@@ -44,9 +48,11 @@ const Job = (props) => {
         {textForButton()}
       </button>
       </div>
-      <a className="btn" target="_blank" href={job.urls.ad}>View Job Posting</a>
-      <a className="btn" target="_blank" href={company.website}>View Company Website</a>
-      <a className="btn" target="_blank" href={job.urls.apply}>Apply to Position</a>
+      <footer>
+        <a className="btn" rel="noopener" target="_blank" href={job.urls.ad}>View Job Posting</a>
+        <a className="btn" rel="noopener" target="_blank" href={company.website}>View Company Website</a>
+        <a className="btn" rel="noopener" target="_blank" href={job.urls.apply}>Apply to Position</a>
+      </footer>
     </article>
   );
 };
